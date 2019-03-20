@@ -1,0 +1,28 @@
+{
+  "name": "cheers-cli",
+  "version": "0.0.1",
+  "description": "A cli for quickly generating change logs",
+  "main": "index.js",
+  "bin": {
+    "cheers": "./bin/index.js"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivewind/cheers.git"
+  },
+  "keywords": [
+    "cli",
+    "angular",
+    "commit",
+    "change logs",
+    "release"
+  ],
+  "author": "olivewind",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olivewind/cheers/issues"
+  },
+  "homepage": "https://github.com/olivewind/cheers"
+}
