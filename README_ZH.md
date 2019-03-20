@@ -38,6 +38,7 @@
 * git tag [version]
 * git commit -m 'release [version]'
 * git push origin [branch]
+* git push origin --tags
 
 
 ## Roadmap
