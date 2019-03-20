@@ -23,3 +23,12 @@ npm install -g cheers-cli
 ``` bash
 cheers
 ```
+
+## Roadmap
+
+* [x] 零配置使用
+* [ ] 支持配置仓库地址
+* [ ] 支持 pre check/dryrun 
+* [ ] 支持配置输出类型
+* [ ] 支持其它风格 commit message
+
