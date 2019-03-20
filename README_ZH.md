@@ -19,14 +19,13 @@
 
 ## 使用
   1. 修改项目 ***package.json*** 的 ***version*** 为目标版本号
-
       ``` json
       {
         "version": "0.0.1"
       }
       ```
 
-  2. 执行命令
+  2. 在项目根目录下执行命令
       ``` bash
       cheers
       ```
@@ -48,4 +47,5 @@
 * [ ] 支持 pre check/dryrun 
 * [ ] 支持配置输出类型
 * [ ] 支持其它风格 commit message
+* [ ] 多语言文档
 
