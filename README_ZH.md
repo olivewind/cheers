@@ -42,6 +42,7 @@
 
 ## Roadmap
 
+* [x] 零依赖
 * [x] 零配置使用
 * [ ] 支持配置仓库地址
 * [ ] 支持 pre check/dryrun 
