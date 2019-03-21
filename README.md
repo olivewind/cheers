@@ -33,6 +33,7 @@ English | [简体中文](README_ZH.md)
       }
       ```
   2. 所有配置
+
       | 参数  | 作用 | 默认值 |
       | --- | --- | --- |
       | commitLink  | commit 链接  | 无
@@ -74,4 +75,3 @@ English | [简体中文](README_ZH.md)
 * [ ] 插件系统
 * [ ] 支持其它风格 commit message
 * [ ] 多语言文档
-
