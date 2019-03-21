@@ -120,14 +120,14 @@ function parseCommit(commit, options) {
     return null;
   }
 
-  msg.type = options.focus.includes(type) ? type : OTHER_TYPE;
+  msg.type = options.pick.includes(type) ? type : OTHER_TYPE;
   msg.component = component || EMPTY_COMPONENT;
   msg.subject = subject;
   return msg;
 }
 
 // 获取所有 commit
-function getCommits() {
+function getCommits(options) {
   // const grep = '^fix|^feat|^perf|^docs|BREAKING';
   /**
    * https://ruby-china.org/topics/939
@@ -141,7 +141,7 @@ function getCommits() {
     .toString()
     .split('\n==END==\n')
     .filter(c => !!c)
-    .map(commit => parseCommit(commit))
+    .map(commit => parseCommit(commit, options))
     .filter(c => !!c);
   return commits;
 }
@@ -155,8 +155,7 @@ function removeFileIfExist(dest) {
 
 function generate(options) {
   removeFileIfExist(options.dest);
-  const commits = getCommits();
-  console.warn('commits', commits);
+  const commits = getCommits(options);
   printSections(commits, options);
 }
 

@@ -42,6 +42,7 @@
       | dryrun  | 仅生成 changelog 不作其它操作  | 'off'
       | preRelease  | 前置钩子  | 无
       | postRelease | 后置钩子  | 无
+      | pick | 提取哪些类型的 commit  | 全部即 ['fix', 'feat', 'perf', 'docs', 'refactor']
     
 ## 使用
   1. 修改项目 ***package.json*** 的 ***version*** 为目标版本号
