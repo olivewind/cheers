@@ -1,3 +1,5 @@
 *.md
 .*
 changelogs
+package-lock.json
+node_modules
