@@ -4,14 +4,14 @@
 [![cheers](https://img.shields.io/npm/v/cheers-cli.svg?style=flat-square)](https://www.npmjs.org/package/cheers-cli)
 [![NPM downloads](https://img.shields.io/npm/dt/cheers-cli.svg?style=flat-square)](https://npmjs.org/package/cheers-cli)
 
-English | [简体中文](README_ZH.md)
+<!-- English | [简体中文](README_ZH.md) -->
 
 ## 安装
   * 全局安装
       ``` bash
       npm install -g cheers-cli
       ```
-  * 项目安装
+  * 本地安装
       ``` bash
       npm install -D cheers-cli
       ```
@@ -42,9 +42,10 @@ English | [简体中文](README_ZH.md)
 
 * [x] 零依赖
 * [x] 零配置使用
-* [ ] 支持配置仓库地址
-* [ ] 支持 pre check/dryrun 
-* [ ] 支持配置输出类型
+* [ ] 支持仓库地址/输出类型, remote 等配置
+* [ ] 支持 pre-check/dryrun 
+* [ ] 支持 hook
+* [ ] 插件系统
 * [ ] 支持其它风格 commit message
 * [ ] 多语言文档
 
