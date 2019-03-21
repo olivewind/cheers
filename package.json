@@ -1,13 +1,12 @@
 {
   "name": "cheers-cli",
-  "version": "0.0.2-rc2",
+  "version": "0.0.2-rc3",
   "description": "A cli for quickly generating change logs",
   "main": "index.js",
   "bin": {
     "cheers": "./bin/index.js"
   },
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olivewind/cheers.git"
@@ -24,5 +23,17 @@
   "bugs": {
     "url": "https://github.com/olivewind/cheers/issues"
   },
-  "homepage": "https://github.com/olivewind/cheers"
+  "homepage": "https://github.com/olivewind/cheers",
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "cheers": {
+    "commitLink": "https://github.com/olivewind/cheers/commits/%s",
+    "issueLink": "https://github.com/olivewind/cheers/issues/%s",
+    "dryrun": "on",
+    "preRelease": "bash preRelease.sh",
+    "postRelease": "bash postRelease.sh"
+  }
 }
