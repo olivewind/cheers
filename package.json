@@ -1,6 +1,6 @@
 {
   "name": "cheers-cli",
-  "version": "0.0.2-rc6",
+  "version": "0.0.2-rc7",
   "description": "A cli for quickly generating change logs",
   "main": "index.js",
   "bin": {

@@ -42,7 +42,9 @@ English | [简体中文](README_ZH.md)
       | preRelease  | 前置钩子  | 无
       | postRelease | 后置钩子  | 无
       | pick | 提取哪些类型的 commit  | 全部即 ['fix', 'feat', 'perf', 'docs', 'refactor']
-    
+      | dir | 输出目录  | `./changelogs`
+      | dest | 输出文件  | v[version].md
+
 ## 使用
   1. 修改项目 ***package.json*** 的 ***version*** 为目标版本号
       ``` json
@@ -64,7 +66,7 @@ English | [简体中文](README_ZH.md)
 * git tag [version]
 * git commit -m 'release [version]'
 * git push origin [branch]
-* git push origin --tags
+* git push origin [version]
 
 ## Roadmap
 

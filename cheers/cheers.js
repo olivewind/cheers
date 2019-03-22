@@ -17,7 +17,7 @@ class Cheers {
     const branch = execSync('git branch').toString().replace('* ', '');
     execSync(`git tag ${this.options.version}`);
     execSync(`git push origin ${branch}`);
-    execSync('git push --tags');
+    execSync(`git push origin ${this.options.version}`);
   }
 
   preCheck() {

@@ -1,5 +1,6 @@
 const util = require('util');
 const fs = require('fs');
+const path = require('path');
 const { execSync } = require('child_process');
 
 const EMPTY_COMPONENT = '$$';
@@ -147,14 +148,17 @@ function getCommits(options) {
 }
 
 // clean
-function removeFileIfExist(dest) {
-  if (fs.existsSync(dest)) {
-    fs.unlinkSync(dest);
+function clean(options) {
+  if (!fs.existsSync(options.dir)) {
+    fs.mkdirSync(options.dir);
+  }
+  if (fs.existsSync(options.dest)) {
+    fs.unlinkSync(options.dest);
   }
 }
 
 function generate(options) {
-  removeFileIfExist(options.dest);
+  clean(options);
   const commits = getCommits(options);
   printSections(commits, options);
 }
