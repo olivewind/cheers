@@ -1,6 +1,7 @@
 const { execSync } = require('child_process');
 const changelog = require('./utils/changelog');
 const check = require('./utils/check');
+const git = require('./utils/git');
 
 class Cheers {
   constructor(options) {
@@ -12,12 +13,13 @@ class Cheers {
   }
 
   commitAndPush() {
-    execSync('git add .');
-    execSync(`git commit -m 'release ${this.options.version}'`);
-    const branch = execSync('git branch').toString().replace('* ', '');
-    execSync(`git tag ${this.options.version}`);
+    git.add('.');
+    git.commit(`release ${this.options.version}`);
+    const branch = git.getCurrentBranch();
+    git.tag(this.options.version);
     execSync(`git push origin ${branch}`);
-    execSync(`git push origin ${this.options.version}`);
+    git.push(branch);
+    git.push(this.options.version);
   }
 
   preCheck() {

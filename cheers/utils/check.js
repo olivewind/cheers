@@ -1,11 +1,7 @@
-const { execSync } = require('child_process');
+const git = require('./git');
 
 function isVersionAvailable(tag) {
-  execSync('git fetch origin  --tags');
-  const tags = execSync('git tag')
-    .toString()
-    .split('\n')
-    .filter(t => !!t);
+  const tags = git.fetchTags();
   return !tags.includes(tag);
 }
 

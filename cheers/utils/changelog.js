@@ -1,7 +1,6 @@
 const util = require('util');
 const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const git = require('./git');
 
 const EMPTY_COMPONENT = '$$';
 const HEADER_TPL = '<a name="%s"></a>\n# %s (%s)\n\n';
@@ -129,22 +128,9 @@ function parseCommit(commit, options) {
 
 // 获取所有 commit
 function getCommits(options) {
-  // const grep = '^fix|^feat|^perf|^docs|BREAKING';
-  /**
-   * https://ruby-china.org/topics/939
-   * 长 commit %h
-   * commit 标题 %s
-   * commit 内容 %b
-  */
-  const format = '%n%H%n%s%n%b%n==END==';
-  const cmd = `git log -E --format=${format} $(git describe --tags --abbrev=0)..HEAD`;
-  const commits = execSync(cmd)
-    .toString()
-    .split('\n==END==\n')
-    .filter(c => !!c)
+  return git.getCommits('%n%H%n%s%n%b%n==END==')
     .map(commit => parseCommit(commit, options))
     .filter(c => !!c);
-  return commits;
 }
 
 // clean
