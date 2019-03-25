@@ -30,7 +30,7 @@
     "eslint-plugin-import": "^2.16.0"
   },
   "cheers": {
-    "commitLink": "https://github.com/olivewind/cheers/commits/%s",
+    "commitLink": "https://github.com/olivewind/cheers/commit/%s",
     "issueLink": "https://github.com/olivewind/cheers/issues/%s",
     "dryrun": "off"
   }
