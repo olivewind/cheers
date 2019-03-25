@@ -1,6 +1,6 @@
 {
   "name": "cheers-cli",
-  "version": "0.0.2-rc7",
+  "version": "0.0.2-rc8",
   "description": "A cli for quickly generating change logs",
   "main": "index.js",
   "bin": {
@@ -32,8 +32,6 @@
   "cheers": {
     "commitLink": "https://github.com/olivewind/cheers/commits/%s",
     "issueLink": "https://github.com/olivewind/cheers/issues/%s",
-    "dryrun": "on",
-    "preRelease": "bash preRelease.sh",
-    "postRelease": "bash postRelease.sh"
+    "dryrun": "off"
   }
 }
